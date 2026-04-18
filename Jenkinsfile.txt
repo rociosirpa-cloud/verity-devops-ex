@@ -43,9 +43,12 @@ pipeline {
 	//Code ends for stage Unit Test
 	
     //Code starts for stage Code Coverage
-		stage('Code Coverage') {
+	stage('Code Coverage') {
             steps {
-                sh 'mvn jacoco:report'
+                //Generate coverage report
+                step([
+                    $class: 'JacocoPublisher'
+                ])
             }
         }
 	//Code ends for stage Code Coverage
