@@ -89,7 +89,7 @@ pipeline {
         }
 		//Code ends for stage API Test	
 
-//Code starts for stage System Test
+        //Code starts for stage System Test
 		stage('System Test') {
             steps {
 				//Change git url below as per your forked github repository URL
